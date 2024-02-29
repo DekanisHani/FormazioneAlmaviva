@@ -1,0 +1,9 @@
+﻿@model List<PersonaViewModel>;
+
+<h3>Tot Persone: @ViewBag.Count</h3>
+@foreach (var item in Model)
+{
+    <h3 class="display-4">Welcome @item.Nome @item.Cognome @item.NumeroTelefono @item.Id_ComuneNascita</h3>
+    <a class="btn btn-primary" href="Home/Edit?Id=@item.Id">Modifica</a>
+    <a class="btn btn-danger" href="Home/Delete?Id=@item.Id">Elimina</a>
+}
